@@ -1,0 +1,226 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+body {
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  background-color: rgb(224, 98, 224);
+}
+
+.cont {
+  display: grid;
+  width: 600px;
+  grid-template-columns: repeat(10, 1fr);
+  margin: 0px 0 0px 0;
+}
+
+.cont div {
+  width: 60px;
+  height: 60px;
+  border: 0.2px solid black;
+}
+
+#p1,
+#p2 {
+  width: 50px;
+  height: 50px;
+  border-radius: 100px;
+  background-color: rgb(236, 82, 82);
+  position: relative;
+  border: 3px solid black;
+
+  /* position: absolute; */
+}
+
+#p1 {
+  position: relative;
+  top: 0px;
+  transition: all linear 0.5s;
+  /* top: 0; */
+  left: -62px;
+  z-index: 2;
+}
+
+#p2 {
+  z-index: 2;
+  position: relative;
+  top: -55px;
+  left: -62px;
+  transition: all linear 0.5s;
+  background-color: rgb(243, 181, 46);
+}
+
+#background {
+  position: relative;
+  top: -615px;
+  left: 8px;
+  /* z-index: -1; */
+  margin: 0;
+  width: 615px;
+  height: 615px;
+}
+#diceCont {
+  margin-top: 100px;
+  display: grid;
+  place-items: center;
+  position: absolute;
+  top: 200px;
+  left: 120px;
+  font-size: 2rem;
+  z-index: 99;
+}
+#diceBtn {
+  z-index: 99;
+  padding: 5px;
+  cursor: pointer;
+  background-color: rgb(75, 140, 197);
+  border-radius: 5px;
+  width: 100px;
+}
+
+@media (max-width: 1250px) {
+  
+  #diceCont {
+    display: flex;
+    place-items: none;
+    top: 92vh;
+    left: 36vw;
+    border: 2px solid red;
+  }
+  #diceBtn {
+    width: 200px;
+    margin-left: 20px;
+  }
+}
+@media (max-width: 1250px) {
+  
+  #diceCont {
+    display: flex;
+    place-items: none;
+    top: 99vh;
+    left: 10vw;
+    /* border: 2px solid red; */
+  }
+  #diceBtn {
+    width: 200px;
+    margin-left: 20px;
+  }
+}
+
+
+.container{
+  width: 90%;
+  padding: 50px;
+  position:relative;
+  transform: translate(-50%,-50%);
+  top: 0;
+  left: 40%;
+  background-color: #ffffff;
+  box-shadow: 0 15px 25px rgba(50,50,50,0.15);
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Poppins",sans-serif;
+  z-index: 1;
+}
+
+.dice-wrapper{
+  width: 90%;
+  display: flex;
+  justify-content: space-around;
+}
+.container p{
+  font-size: 16px;
+  margin: 30px 0;
+  font-weight: 500;
+  
+}
+.container button{
+  background-color: #c048ec;
+  border: none;
+  outline: none;
+  color: #ffffff;
+  padding: 15px 0;
+  width: 150px;
+  letter-spacing: 1px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.container button:hover{
+  background-color: #8d28a6;
+}
+
+.shake{
+  animation: shake 0.5s infinite;
+}
+@keyframes shake{
+  0%{
+      transform: rotate(8deg);
+  }
+  50%{
+      transform: rotate(-8deg);
+  }
+  100%{
+      transform: rotate(8deg);
+  }
+}
+
+h5 {
+  font-size: 1.5rem;
+  margin: 10px;
+}
+
+.card {
+  z-index: 9999;
+  display: none;
+  background-color: #f0f0f0;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  max-width: 400px;
+  text-align: center;
+  position: fixed;
+  top: 50%; /* Posisi vertikal di tengah */
+  left: 50%; /* Posisi horizontal di tengah */
+  transform: translate(-50%, -50%); /* Untuk mengatur agar kartu berada di tengah layar */
+}
+
+.card *{
+  margin: 50px;
+}
+
+.tombol {
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+#btnBenar{
+  background-color: #47e14c;
+}
+
+#btnSalah{
+  background-color: #ed4747;
+}
+
+#btnBenar:hover{
+  background-color: #35b337;
+}
+
+#btnSalah:hover{
+  background-color: #a22d2d;
+}
